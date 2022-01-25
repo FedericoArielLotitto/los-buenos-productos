@@ -18,4 +18,15 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> buscarTodos() {
         return productoRepository.findAll();
     }
+
+    @Override
+    public Producto crear(Producto producto) {
+        if(producto == null) {
+            throw new IllegalArgumentException("El producto a crear no puede ser nulo.");
+        }
+//        if(producto.getNombre() == null) {
+//            throw new IllegalArgumentException("El nombre del producto es obligatorio.");
+//        }
+        return productoRepository.save(producto);
+    }
 }
