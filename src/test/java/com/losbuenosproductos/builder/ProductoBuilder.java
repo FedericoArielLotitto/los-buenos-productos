@@ -21,6 +21,11 @@ public class ProductoBuilder {
         return builder;
     }
     
+    public ProductoBuilder conNombre(String nombre) {
+        this.instance.setNombre(nombre);
+        return this;
+    }
+    
     public ProductoBuilder conNumeroDeSerie(String numeroDeSerie) {
         this.instance.setNumeroDeSerie(numeroDeSerie);
         return this;
